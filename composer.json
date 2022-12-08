@@ -1,0 +1,22 @@
+{
+    "name": "koalafacade/lazada-scrapper",
+    "description": "Scrapper for Lazada product with PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "KoalaFacade\\LazadaScrapper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pemudakoding",
+            "email": "pemudakoding@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "8.1"
+    }
+}
