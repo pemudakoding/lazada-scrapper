@@ -25,7 +25,7 @@ class LazadaScrapper
         return new LazadaScrapper(client: $client);
     }
 
-    public function createRequest(RequestMethod $method, string $to)
+    public function createRequest(RequestMethod $method, string $to): ScrapperBuilder
     {
         $this->client->request(method: $method->value, uri: $to);
 
