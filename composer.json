@@ -10,13 +10,25 @@
     },
     "authors": [
         {
-            "name": "pemudakoding",
+            "name": "Stiven Trizky Katuuk",
             "email": "pemudakoding@gmail.com",
             "role": "Developer"
         }
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "8.1"
+        "php": "^8.1",
+        "symfony/panther": "^2.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.9",
+        "laravel/pint": "^0.1.2",
+        "pestphp/pest": "^1.22",
+        "orchestra/testbench": "^7.15"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
