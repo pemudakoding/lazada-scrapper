@@ -15,7 +15,7 @@ class LazadaScrapper
         // PHP
     }
 
-    public static function createClient(Client $to = Client::Firefox): static
+    public static function createClient(Client $to = Client::Firefox): LazadaScrapper
     {
         $client = match ($to) {
             Client::Chrome => PantherClient::createChromeClient(),
