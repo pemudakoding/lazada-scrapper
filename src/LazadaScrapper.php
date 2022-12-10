@@ -3,6 +3,7 @@
 namespace Koalafacade\LazadaScrapper;
 
 use Koalafacade\LazadaScrapper\Enums\Client;
+use Koalafacade\LazadaScrapper\Enums\RequestMethod;
 use Symfony\Component\Panther\Client as PantherClient;
 
 class LazadaScrapper
@@ -24,8 +25,10 @@ class LazadaScrapper
         return new LazadaScrapper(client: $client);
     }
 
-    public function createRequest(string $to)
+    public function createRequest(RequestMethod $method, string $to)
     {
-        return new ScrapperBuilder();
+        $this->client->request(method: $method->value, uri: $to);
+
+        return new ScrapperBuilder(client: $this->client);
     }
 }
